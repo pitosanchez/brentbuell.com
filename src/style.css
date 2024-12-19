@@ -20,12 +20,40 @@ html {
 
 body {
   flex-direction: column;
-  text-align: center;
   max-width: 1280px;
-  margin: 5rem;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: end;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  color: blue;
+  transition: color 250ms ease-in-out;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .bb-img {
@@ -38,13 +66,15 @@ body {
 }
 
 .container {
-  padding: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .para {
-  margin-top: 8.95rem;
+  padding: 0;
+  margin: 0;
   font-size: x-large;
   text-align: justify;
 }
@@ -74,7 +104,12 @@ body {
 }
 
 @media (min-width: 1024px) {
-  body {
+  .main {
     flex-direction: row;
+    align-items: start;
+  }
+  .container {
+    padding-left: 5rem;
+    padding-right: 0;
   }
 }
