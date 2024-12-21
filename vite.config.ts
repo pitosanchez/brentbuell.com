@@ -3,9 +3,10 @@ import { resolve, join } from "node:path";
 import { cwd } from "node:process";
 import { globSync } from "node:fs";
 
+const base = process.env.NODE_ENV === "production" ? "/brentbuell.com/" : "/";
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [],
+  base,
   root: join(cwd(), "src"),
   publicDir: join(cwd(), "public"),
   build: {
