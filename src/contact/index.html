@@ -4,14 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.ts" type="module"></script>
     <title>Contact</title>
   </head>
   <body>
-    <h1>Contact</h1>
-    <div class="contact-container">
-      <h1>Contact Us</h1>
-      <form class="contact-form">
+    <header class="header">
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/about/">About</a>
+      </nav>
+    </header>
+    <main class="main">
+      <h1>Let's Connect</h1>
+
+      <form method="POST" class="contact-form" id="form">
+        <input
+          type="hidden"
+          value="e0883def-233a-4175-bc74-7ce600da1e85"
+          name="access_key"
+        />
         <div class="form-group">
           <label for="name">Name</label>
           <input
@@ -42,8 +54,16 @@
             required
           ></textarea>
         </div>
-        <button type="submit">Send Message</button>
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none"
+        />
+        <button type="submit" class="button" id="button">Send Message</button>
+        <div id="result" class="result"></div>
       </form>
-    </div>
+    </main>
   </body>
 </html>
