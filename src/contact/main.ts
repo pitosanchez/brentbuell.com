@@ -46,8 +46,9 @@ function rewriteLinks() {
     document.querySelectorAll(".nav-link")
   );
   links.forEach((element) => {
-    const currentPath = element.pathname.split("/").slice(1);
-    element.pathname = import.meta.env.BASE_URL + currentPath.join("/");
+    const base = import.meta.env.BASE_URL;
+    const currentPath = element.pathname.replace(base, "").split("/");
+    element.pathname = base + currentPath.join("/");
   });
 }
 
