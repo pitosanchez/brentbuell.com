@@ -61,7 +61,7 @@ body {
   margin-right: auto;
   max-width: 575px;
   height: auto;
-  width: auto;
+  width: 100%;
 }
 
 .container {
@@ -80,7 +80,7 @@ body {
 
 .signature {
   height: auto;
-  width: auto;
+  width: 100%;
   object-fit: contain;
   max-width: 400px;
   margin-left: auto;
